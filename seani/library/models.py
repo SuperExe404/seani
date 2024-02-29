@@ -8,6 +8,9 @@ class Module(models.Model):
     description = models.CharField(max_length=200,
                                    verbose_name="Descripcion")
 
+    @property                               
+    def num_questions(self):
+        return self.question_set.count()
 
     def __str__(self):
         return self.name
@@ -34,10 +37,12 @@ class Question(models.Model):
                                verbose_name = 'Respuesta B')
     answer3 = models.CharField(max_length=200,
                                verbose_name = 'Respuesta C',
-                               null=True)
+                               null=True,
+                               blank=True)
     answer4 = models.CharField(max_length=200,
                                verbose_name = 'Respuesta D',
-                               null=True)
+                               null=True,
+                               blank=True)
     correct = models.CharField(max_length=5,
                                verbose_name = 'Respuesta correcta')
     
