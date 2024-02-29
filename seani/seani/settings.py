@@ -130,7 +130,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 cloudinary.config( 
   cloud_name = "dyk6c8vbt", #str(os.environ.get('CLOUD_NAME')),
-  api_key = "874837483274837", #str(os.environ.get('API_KEY')),
+  api_key = "681993524719316", #str(os.environ.get('API_KEY')),
   api_secret = "a676b67565c6767a6767d6767f676fe1", #str(os.environ.get('API_SECRET')),
   secure = True
 )
